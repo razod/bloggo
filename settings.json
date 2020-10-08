@@ -1,0 +1,11 @@
+{
+  "author": {
+    "name": "John Doe",
+    "bio": "I am a passionate web developer! I love using tools like TypeScript and Node.js, you can <a href=\"https://yourportfolio.com/\">view my work here</a>!",
+    "pfp": "./public/assets/pfp.png"
+  },
+  "host": {
+    "port": 8080,
+    "primary_color": "#5539cc"
+  }
+}

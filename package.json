@@ -1,0 +1,25 @@
+{
+  "name": "bloggo",
+  "version": "1.0.0",
+  "description": "An open source blogging web-app built on Node.js and TypeScript!",
+  "main": "index.js",
+  "dependencies": {
+    "@types/node": "^14.11.5",
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "quick.db": "^7.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon dist/server.js",
+    "build": "tsc ./src/server.ts --outDir ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

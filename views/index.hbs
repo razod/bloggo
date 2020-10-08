@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{author.name}}</title>
+    <link rel="stylesheet" href="/public/style.css">
+  </head>
+  {{{colors}}}
+  <body>
+    <div class="author_info">
+      <img src="{{author.pfp}}" class="author_pfp"/>
+      <h1 class="change_color_text">{{author.name}}</h1>
+      <p>{{{author.bio}}}</p>
+    </div>
+    {{#each recents}}
+      <div class="post" style="cursor:pointer" onclick="window.open('/posts/{{this.id}}', '_self');">
+        {{#if this.title}}
+          <h2>{{this.title}}</h2>
+        {{/if}}
+        {{#if this.timestamp}}
+          <h3>{{this.timestamp}}</h3>
+        {{/if}}
+      </div>
+    {{/each}}
+
+    <svg class="body" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1920 1080" width="1920" height="1080"><defs><path d="M1789.85 924.12L1821.9 956.17L1803.95 974.12L1771.9 942.07L1739.85 974.12L1721.9 956.17L1753.95 924.12L1721.9 892.07L1739.85 874.12L1771.9 906.17L1803.95 874.12L1821.9 892.07L1789.85 924.12Z" id="aqAhY2tmn"></path><path d="M1605.25 624.38L1650.56 708.75L1559.93 708.75L1469.31 708.75L1514.62 624.38L1559.93 540L1605.25 624.38Z" id="a11RIGpKqY"></path><path d="M259.72 144.02L313.7 152.28L274.64 192.33L283.86 248.89L235.58 222.18L187.3 248.89L196.52 192.33L157.45 152.28L211.44 144.02L235.58 92.57L259.72 144.02Z" id="btezAQdzR"></path><path d="M544.35 886.39C544.35 927.78 512.14 961.39 472.47 961.39C432.8 961.39 400.6 927.78 400.6 886.39C400.6 844.99 432.8 811.39 472.47 811.39C512.14 811.39 544.35 844.99 544.35 886.39Z" id="aoHlG78sB"></path><path d="M1706.85 99.9L1869.35 99.9L1869.35 258.31L1706.85 258.31L1706.85 99.9Z" id="c6PoYycDYd"></path><path d="M548.7 335.44L580.75 367.49L562.8 385.44L530.75 353.39L498.7 385.44L480.75 367.49L512.8 335.44L480.75 303.39L498.7 285.44L530.75 317.49L562.8 285.44L580.75 303.39L548.7 335.44Z" id="a3mp0Dw4A9"></path><path d="M1309.65 879.66L1363.64 887.92L1324.57 927.97L1333.79 984.53L1285.51 957.82L1237.23 984.53L1246.45 927.97L1207.39 887.92L1261.37 879.66L1285.51 828.21L1309.65 879.66Z" id="ezsjDXLxj"></path><path d="M234.98 691.3L280.29 606.93L189.66 606.93L99.04 606.93L144.35 691.3L189.66 775.68L234.98 691.3Z" id="a6KqeDBuV"></path></defs><g><g><g><use xlink:href="#aqAhY2tmn" opacity="1" fill-opacity="1"></use></g><g><use xlink:href="#a11RIGpKqY" opacity="1" fill-opacity="1"></use></g><g><use xlink:href="#btezAQdzR" opacity="1" fill-opacity="1"></use></g><g><use xlink:href="#aoHlG78sB" opacity="1" fill-opacity="1"></use></g><g><use xlink:href="#c6PoYycDYd" opacity="1" fill-opacity="1"></use></g><g><use xlink:href="#a3mp0Dw4A9" opacity="1" fill-opacity="1"></use></g><g><use xlink:href="#ezsjDXLxj" opacity="1" fill-opacity="1"></use></g><g><use xlink:href="#a6KqeDBuV" opacity="1" fill-opacity="1"></use></g></g></g></svg>
+  </body>
+</html>

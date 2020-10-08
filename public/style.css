@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.author_info {
+  padding:3%;
+  font-size: 120%;
+}
+
+img.author_pfp {
+  float: left;
+  width:auto;
+  max-height:30vh;
+  border-radius: 50%;
+  margin-right:5%;
+}
+
+.author_info p {
+  width: 60vw;
+  font-size:95%;
+}
+
+svg.body, img.body {
+  position:fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  height:100vh!important;
+  width:100vw!important;
+  z-index: -1;
+}
+
+.post {
+  display: block;
+}
+
+.post h3 {
+  font-weight: normal;
+  text-decoration: italic;
+}
