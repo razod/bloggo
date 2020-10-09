@@ -1,5 +1,5 @@
 # Bloggo
-An open source blogging web-app built on Node.js and TypeScript!
+An open source blogging boilerplate web-app built on Node.js and TypeScript!
 
 ## Cloning
 Want to create your own blog? Well, thats exactly why this is open source here on GitHub! All you have to do is clone this page:
