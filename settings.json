@@ -6,7 +6,6 @@
   },
   "host": {
     "port": 8080,
-    "primary_color": "#5539cc",
-    "header_text_color": ""
+    "primary_color": "#5539cc"
   }
 }

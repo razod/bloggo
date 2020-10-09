@@ -48,7 +48,7 @@ Well now you have to edit your blog! You can use the `settings.json` file in `~`
 ### Credits
 Made with <3 by Sqwyer
 
-Recourses:
+Resources:
   - `node.js` - [Website](https://nodejs.org)
     - `NPM` - [Website](https://npmjs.com)
       - `typescript` - [NPM Package](https://npmjs.com/package/typescript)
