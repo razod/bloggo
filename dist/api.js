@@ -4,6 +4,7 @@ exports.router = void 0;
 var express = require("express");
 var dotenv = require("dotenv");
 var db = require("quick.db");
+var showdown = require("showdown");
 var timestamp_1 = require("./timestamp");
 var author_1 = require("./author");
 dotenv.config();
@@ -17,12 +18,15 @@ router.post('/publish', function (req, res) {
     if (match) {
         if (db.get('posts') == null || db.get('posts') == undefined)
             db.set('posts', []);
-        var id = db.get('posts');
+        var id = db.get('posts').length++;
+        var conv = new showdown.Converter();
+        var html = conv.makeHtml(body.content);
         db.push('posts', {
             title: body.title,
             markdown: body.content,
+            html: html,
             timestamp: timestamp_1.generateTimestamp(),
-            id: id++
+            id: id
         });
         res.redirect("/posts/" + id);
     }
@@ -38,7 +42,6 @@ router.get('/publish', function (req, res) {
 });
 router.get('/posts/:id', function (req, res) {
     var all = db.get('posts');
-    console.log(req.params.id);
     var post = all.find(function (obj) {
         if (obj.id === Number(req.params.id))
             return obj;
@@ -48,6 +51,7 @@ router.get('/posts/:id', function (req, res) {
         res.render(__dirname + '/../views/post', {
             title: post.title,
             timestamp: post.timestamp,
+            html: post.html,
             content: post.html,
             author: author
         });

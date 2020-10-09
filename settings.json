@@ -1,11 +1,12 @@
 {
   "author": {
-    "name": "John Doe",
-    "bio": "I am a passionate web developer! I love using tools like TypeScript and Node.js, you can <a href=\"https://yourportfolio.com/\">view my work here</a>!",
+    "name": "Your Average Blogger",
+    "bio": "Hello there, I'm a hobbyist developer who loves to code! My favorite programming language is TypeScript, and my typical development environment includes Node and GitHub!",
     "pfp": "./public/assets/pfp.png"
   },
   "host": {
     "port": 8080,
-    "primary_color": "#5539cc"
+    "primary_color": "#5539cc",
+    "header_text_color": ""
   }
 }

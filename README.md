@@ -54,6 +54,7 @@ Recourses:
       - `typescript` - [NPM Package](https://npmjs.com/package/typescript)
         - `@types/node` - [NPM Package](https://npmjs.com/package/@types/node)
       - `express` - [NPM Package](https://npmjs.com/package/express)
+      - `showdown` - [NPM Package](https://npmjs.com/package/showdown)
       - `hbs` [NPM Package](https://npmjs.com/package/hbs)
       - `quick.db` [NPM Package](https://npmjs.com/package/quick.db)
       - `nodemon` [NPM Package](https://npmjs.com/package/nodemon)

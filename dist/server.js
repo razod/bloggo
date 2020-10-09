@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(api_1.router);
 app.set('view engine', 'hbs');
 app.get('/', function (req, res) {
-    res.render(__dirname + '/../views/index', { recents: recents_1.renderRecents(), author: author_1.getAuthorInfo(), colors: color_1.colors(host_1.getHostInfo().primary_color), color: color_1.colors(host_1.getHostInfo().primary_color) });
+    res.render(__dirname + '/../views/index', { recents: recents_1.renderRecents(), author: author_1.getAuthorInfo(), colors: color_1.hexToRgb(host_1.getHostInfo().primary_color), color_styles: color_1.colors(host_1.getHostInfo().primary_color) });
 });
 app.listen(host_1.getHostInfo().port, function (e) {
     if (e)

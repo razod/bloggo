@@ -15,7 +15,7 @@ function hexToRgb(hex: string) {
 function colors(color: string) {
   let rgb = hexToRgb(color);
   // let color_full = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 1)`;
-  let color_light = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.2)`;
+  let color_light = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.3)`;
 
   return `
   <style>
@@ -31,11 +31,49 @@ function colors(color: string) {
       opacity:1;
     }
 
-    svg.body path, svg.body{
+    /* svg.body path, svg.body{
       fill: ${color_light}!important;
+    } */
+
+    img.author_pfp {
+      border: 10px solid ${color_light};
+      transition: border 0.2s ease-in;
+      cursor: pointer;
+    }
+
+    img.author_pfp:hover {
+      border: 10px solid rgba(${rgb.r},${rgb.g},${rgb.b},0.5)
+    }
+
+    .author_info {
+      background: rgba(${rgb.r},${rgb.g},${rgb.b},0.1)
+    }
+
+    .author_info p {
+      color: rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.57)
+    }
+
+    h1.sep::after {
+      content:' ';
+      display:block;
+      border:5px solid rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.8);
+      border-radius:4px;
+      -webkit-border-radius:4px;
+      -moz-border-radius:4px;
+      box-shadow:inset 0 1px 1px rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.57);
+      -webkit-box-shadow:inset 0 1px 1px rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.57);
+      -moz-box-shadow:inset 0 1px 1px rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.57);
+      width:5vw;
+      margin:1% auto;
+    }
+
+    h1.sep {
+      color: rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.8);
+      font-size:400%;
+      font-weight:800;
     }
   </style>
   `;
 }
 
-export { colors }
+export { colors, hexToRgb }

@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as dotenv from 'dotenv';
 import * as db from 'quick.db';
+import * as showdown from 'showdown';
 
 import { generateTimestamp } from './timestamp';
 import { getAuthorInfo } from './author'
@@ -17,12 +18,15 @@ router.post('/publish', (req: any, res: any) => {
 
   if(match) {
     if(db.get('posts') == null || db.get('posts') == undefined) db.set('posts', []);
-    let id: any = db.get('posts');
+    let id: any = db.get('posts').length++;
+    let conv = new showdown.Converter();
+    let html = conv.makeHtml(body.content);
     db.push('posts', {
       title: body.title,
       markdown: body.content,
+      html: html,
       timestamp: generateTimestamp(),
-      id: id++
+      id: id
     });
 
     res.redirect(`/posts/${id}`);
@@ -41,8 +45,6 @@ router.get('/publish', (req: any, res: any) => {
 router.get('/posts/:id', (req: any, res: any) => {
   let all: any = db.get('posts');
 
-  console.log(req.params.id);
-
   let post: any = all.find(obj => {
     if(obj.id === Number(req.params.id)) return obj
   });
@@ -51,6 +53,7 @@ router.get('/posts/:id', (req: any, res: any) => {
     res.render(__dirname + '/../views/post', {
       title: post.title,
       timestamp: post.timestamp,
+      html: post.html,
       content: post.html,
       author: author
     });
