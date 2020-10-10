@@ -3,6 +3,8 @@
 # Bloggo
 An open source blogging boilerplate web-app built on Node.js and TypeScript!
 
+![Open Source](https://img.shields.io/badge/Made%20with-%20%E2%9D%A4%EF%B8%8F%20%20-%23ff9191)
+
 ## Cloning
 Want to create your own blog? Well, thats exactly why this is open source here on GitHub! All you have to do is clone this page:
 ```
