@@ -23,7 +23,7 @@ So, now you get to make your blog post! What you need to do is create a `.env` f
 PASSWORD=YOUR_PASSWORD
 ```
 
-> Note: You can edit the "YOUR_PASSWORD", but must leave the name as `PASSWORD` (this will be encrypted)!
+> Note: You can edit the "YOUR_PASSWORD", but must leave the name as `PASSWORD`!
 
 From here, you can go to your site (hosted locally or deployed) and go to `https://yoursite.com/publish` OR `localhost:8080/publish`, where you will be able to write out your post! (You will be asked for the password at the end to ensure it is you!
 
