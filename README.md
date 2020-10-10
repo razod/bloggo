@@ -1,4 +1,4 @@
-<img src="./bloggo.png" height="80px" width="80px" alt="Bloggo Logo" />
+<img src="./bloggo.png" height="150px" width="150px" alt="Bloggo Logo" />
 
 # Bloggo
 An open source blogging boilerplate web-app built on Node.js and TypeScript!
