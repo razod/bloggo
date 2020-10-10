@@ -1,3 +1,4 @@
+![Bloggo Logo](./bloggo.png)
 # Bloggo
 An open source blogging boilerplate web-app built on Node.js and TypeScript!
 
